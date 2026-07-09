@@ -1,0 +1,183 @@
+ /* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #1a252f;
+    color: white;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 span {
+    color: #e74c3c;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #bdc3c7;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: #e74c3c;
+}
+
+/* Feed de Posts */
+.post {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.post-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.post-content {
+    padding: 25px;
+}
+
+.category {
+    background-color: #e74c3c;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.post h2 {
+    margin: 15px 0 10px 0;
+    color: #2c3e50;
+}
+
+.meta {
+    font-size: 0.85rem;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+}
+
+.excerpt {
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Botão Curtir */
+.like-btn {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.like-btn:hover {
+    transform: scale(1.05);
+    background-color: #f5c6cb;
+}
+
+.like-btn.liked {
+    background-color: #e74c3c;
+    color: white;
+}
+
+/* Barra Lateral */
+.sidebar .widget {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.sidebar h3 {
+    color: #2c3e50;
+    border-bottom: 2px solid #e74c3c;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+.sidebar p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #666;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    color: #34495e;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.sidebar ul li a:hover {
+    color: #e74c3c;
+}
+
+/* Rodapé */
+footer {
+    background-color: #1a252f;
+    color: #7f8c8d;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Responsividade Básica (para celulares) */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
